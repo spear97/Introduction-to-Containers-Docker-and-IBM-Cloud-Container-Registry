@@ -36,3 +36,59 @@ IBM Cloud Container Registry is a fully-managed private registry service provide
 - `Scalability and Availability`: The registry is built on IBM Cloud's scalable infrastructure, ensuring high availability and performance for users deploying containerized applications in production environments.
 - `Developer-Friendly Tools`: IBM Cloud Container Registry provides a set of developer-friendly tools and APIs for managing container images and Helm charts. This includes command-line tools, web-based interfaces, and programmatic APIs for automation.
 - `Compliance and Governance`: The registry helps organizations meet regulatory compliance requirements and enforce governance policies for container image management. This includes features for auditing, logging, and versioning of container images.
+
+## How to Push a Docker Container to IBM Container Registry
+
+To push a Docker container to IBM Container Registry, follow these steps:
+
+### 1. Install Docker
+
+Ensure that Docker is installed on your local machine. You can download and install Docker from the [official Docker website](https://www.docker.com/get-started)
+
+### 2. Log in to IBM Cloud
+
+Log in to your IBM Cloud account using the IBM Cloud CLI. If you haven't installed the IBM Cloud CLI, you can download it [here](https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
+
+```bash
+ibmcloud login
+```
+
+### 3. Set the IBM Cloud Container Registry Plugin
+
+Set the IBM Cloud Container Registry Plugin as the target for Docker commands.
+
+```bash
+ibmcloud cr login
+```
+
+### 4. Build your Docker Image
+
+Navigate to the directory containing your Dockerfile and build your Docker image.
+
+```bash
+docker build -t <image-name> .
+```
+
+### 5. Tag the Docker Image
+
+Tag the Docker image with your IBM Cloud Container Registry namespace.
+
+```bash
+docker tag <image-name> us.icr.io/<namespace>/<image-name>
+```
+
+Replace <namespace> with your IBM Cloud Container Registry namespace and <image-name> with the name of your Docker image.
+
+### 6. Push the Docker Image
+
+Push the Docker image to IBM Container Registry.
+
+```bash
+docker push us.icr.io/<namespace>/<image-name>
+```
+
+### 7. Verify the Image
+
+Log in to the IBM Cloud console and navigate to the Container Registry section to verify that your Docker image has been successfully pushed.
+
+Congratulations! You have successfully pushed a Docker container to IBM Container Registry. You can now deploy your containerized application using the IBM Cloud Kubernetes Service or any other Kubernetes cluster integrated with IBM Cloud.
