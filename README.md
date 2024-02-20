@@ -1,5 +1,7 @@
 # Introduction to Containers Docker and IBM Cloud Container Registry
 
+This Repository provides an example on how to create a Docker Container and how to push it to IBM Cloud Contianer Registry.
+
 ## What is a Container?
 
 Containerization is a lightweight, portable, and efficient approach to software development and deployment that encapsulates applications and their dependencies into isolated environments called containers. Containers are self-contained units that package everything an application needs to run, including code, runtime, libraries, and dependencies, enabling consistent and reliable application deployment across different computing environments. Overall, containerization revolutionizes software development and deployment by providing a consistent, efficient, and portable way to package, distribute, and run applications, making it easier to build, deploy, and manage modern applications in cloud-native environments.
